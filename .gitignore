@@ -1,0 +1,8 @@
+# System Files
+.DS_Store
+
+# Node
+node_modules
+
+# Log
+*.log
