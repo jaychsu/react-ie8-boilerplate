@@ -2,36 +2,26 @@ import React, { Component } from 'react'
 import {
   Router,
   Route,
-  hashHistory
+  IndexRoute
 } from 'react-router'
+import { createHistory, useBasename } from 'history'
 
 import Layout from './container/layout'
-import Home from './container/index'
+import Home from './container/home'
 
-const routes = {
-  component: Layout,
-  childRoutes: [
-    {
-      path: '/',
-      indexRoute: {
-        onEnter: (nextState, replace) => replace('', 'home')
-      }
-    },
-    {
-      path: 'home',
-      getComponent(nextState, cb) {
-        require.ensure([], require => {
-          cb(null, Home)
-        })
-      }
-    }
-  ]
-}
+const history = useBasename(createHistory)({
+    basename: '/'
+})
 
 export default class AppRouter extends Component {
   render() {
     return (
-      <Router history={ hashHistory } routes={ routes } />
+      <Router history={ history }>
+        <Route path="/" component={ Layout }>
+          <IndexRoute onEnter={ (nextState, replace) => replace('', 'home') } />
+          <Route path="home" component={ Home }/>
+        </Route>
+      </Router>
     )
   }
 }
