@@ -10,7 +10,7 @@ export default class Section extends Component {
   static propTypes = {
     title: React.PropTypes.string.isRequired,
     subtitle: React.PropTypes.string,
-    content: React.PropTypes.instanceOf(Component).isRequired
+    content: React.PropTypes.element.isRequired
   }
 
   render() {
@@ -20,7 +20,7 @@ export default class Section extends Component {
         { this.props.subtitle &&
           <div className="section-subtitle">{ this.props.subtitle }</div>
         }
-        { this.props.content }
+        <div className="section-content">{ this.props.content }</div>
       </div>
     )
   }
