@@ -41,6 +41,8 @@
     "cross-env": "1.0.6",
     "es3ify-loader": "0.1.0",
     "express": "4.13.3",
+    "less": "2.7.1",
+    "less-loader": "2.2.3",
     "webpack": "1.12.9",
     "webpack-dev-middleware": "1.4.0",
     "webpack-hot-middleware": "2.6.0"
