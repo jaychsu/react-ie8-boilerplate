@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Header from 'component/header'
 
 export default class Product extends Component {
   constructor(props) {
@@ -8,7 +9,7 @@ export default class Product extends Component {
   render() {
     return (
       <div>
-        Product: { this.props.params.pname }
+        <Header title={ `Product: ${this.props.params.pname}` } />
       </div>
     )
   }

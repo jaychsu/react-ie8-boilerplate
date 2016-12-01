@@ -12,10 +12,10 @@ export default class App extends Component {
     return (
       <div id="app-container">
         <Row>
-          <Col span={6}>
+          <Col span={4}>
             <SideBar />
           </Col>
-          <Col span={18}>
+          <Col span={20}>
             {
               this.props.children && React.cloneElement(this.props.children, { parent: this })
             }

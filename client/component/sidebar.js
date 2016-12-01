@@ -4,6 +4,8 @@ import { Menu, Icon } from 'antd'
 
 const { SubMenu, MenuItemGroup } = Menu
 
+import './sidebar.less'
+
 export default class SideBar extends Component {
   constructor(props) {
     super(props)
@@ -16,7 +18,7 @@ export default class SideBar extends Component {
   }
 
   handleClick(e) {
-    console.log('click ', e)
+    console.log('click: ', e)
     this.setState({
       current: e.key,
     })
@@ -28,7 +30,9 @@ export default class SideBar extends Component {
         <Link to="/home" onClick={ e => this.setState({ current: '' }) }>
           <div
             className="logo"
-          >Autodesk</div>
+          >
+            Autodesk
+          </div>
         </Link>
         <Menu
           onClick={ this.handleClick }

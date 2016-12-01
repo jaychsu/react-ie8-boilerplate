@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Header from 'component/header'
 
 export default class Payment extends Component {
   constructor(props) {
@@ -7,7 +8,7 @@ export default class Payment extends Component {
 
   render() {
     return (
-      <div>Payment</div>
+      <Header title="Payment" />
     )
   }
 }

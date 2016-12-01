@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Header from 'component/header'
 
 export default class Profile extends Component {
   constructor(props) {
@@ -7,7 +8,7 @@ export default class Profile extends Component {
 
   render() {
     return (
-      <div>Profile</div>
+      <Header title="Profile" />
     )
   }
 }
