@@ -11,7 +11,7 @@ export default class SideBar extends Component {
     this.handleClick = this.handleClick.bind(this)
 
     this.state = {
-      current: 'profile'
+      current: ''
     }
   }
 
@@ -25,9 +25,11 @@ export default class SideBar extends Component {
   render() {
     return (
       <div className="sidebar">
-        <div
-          className="logo"
-        >Autodesk</div>
+        <Link to="/home" onClick={ e => this.setState({ current: '' }) }>
+          <div
+            className="logo"
+          >Autodesk</div>
+        </Link>
         <Menu
           onClick={ this.handleClick }
           defaultOpenKeys={['product']}
@@ -44,11 +46,17 @@ export default class SideBar extends Component {
             <Link to="/communication"><Icon type="appstore" /><span>COMMUNICATIONS</span></Link>
           </Menu.Item>
           <SubMenu key="product" title={
-            <Link to="/product"><Icon type="appstore" /><span>Products</span></Link>
+            <span><Icon type="appstore" /><span>Products</span></span>
           }>
-            <Menu.Item key="product1">PIXLR</Menu.Item>
-            <Menu.Item key="product2">SKETCHBOOK</Menu.Item>
-            <Menu.Item key="product3">EXPLORE MORE...</Menu.Item>
+            <Menu.Item key="pixlr">
+              <Link to="/product/pixlr">PIXLR</Link>
+            </Menu.Item>
+            <Menu.Item key="sketchbook">
+              <Link to="/product/sketchbook">SKETCHBOOK</Link>
+            </Menu.Item>
+            <Menu.Item key="more">
+              <Link to="/product/more">EXPLORE MORE...</Link>
+            </Menu.Item>
           </SubMenu>
         </Menu>
       </div>
