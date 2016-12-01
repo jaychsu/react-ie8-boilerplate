@@ -14,7 +14,7 @@ var webpack = require('webpack')
 var webpackConfig
 var compiler
 
-if ( util.isEnvAvailable()
+if ( util.env.isEnvAvailable()
   && util.env.current === 'dev') {
   webpackConfig = require('../webpack/dev.js')
   compiler = webpack(webpackConfig)

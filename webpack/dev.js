@@ -9,7 +9,7 @@ module.exports = Object.assign(baseConfig, {
   output: Object.assign(baseConfig.output, {
     publicPath: 'http://localhost:9753/'
   }),
-  plugins: baseConfig.concat([
+  plugins: baseConfig.plugins.concat([
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()

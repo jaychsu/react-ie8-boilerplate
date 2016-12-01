@@ -5,7 +5,7 @@ var bundleFolderName = 'bundle'
 // The following paths are relative to path of `package.json`
 module.exports = {
   entry: {
-    home: './client/page/home.entry.js'
+    index: './client/index.entry.js'
   },
   output: {
     path: path.resolve('./client'),
@@ -31,7 +31,9 @@ module.exports = {
     extensions: ['', '.js'],
     alias: {
       api: path.resolve('./client/api'),
-      page: path.resolve('./client/page'),
+      component: path.resolve('./client/component'),
+      container: path.resolve('./client/container'),
+      store: path.resolve('./client/store'),
       util: path.resolve('./client/util')
     }
   },
