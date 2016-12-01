@@ -7,6 +7,7 @@ import {
 
 import Header from 'component/header'
 import Section from 'component/section'
+import CreditList from 'component/credit-list'
 
 export default class Payment extends Component {
   constructor(props) {
@@ -49,12 +50,15 @@ export default class Payment extends Component {
         <Section
           title="Payment Methods"
           subtitle="What you purchased and how you paid"
+          content={
+            <CreditList dataSource={ credits } />
+          }
         />
         <Section
           title="Transaction History"
           content={
             <Table
-              dataSource={ dataSource }
+              dataSource={ transactions }
               columns={[{
                 title: 'Date',
                 dataIndex: 'date',
@@ -97,7 +101,7 @@ export default class Payment extends Component {
   }
 }
 
-const dataSource = [{
+const transactions = [{
   key: 0,
   date: 'Jan 1, 2016',
   order: 'SketchBook.com::#21321412',
@@ -115,4 +119,36 @@ const dataSource = [{
   order: 'Graphic.com::#1356361',
   status: 'Shipped',
   amount: 28.24
+}]
+
+const credits = [{
+  key: 0,
+  cardid: '123456781234',
+  expiration: '01/23',
+  memberships: ['Pixlr Annual']
+}, {
+  key: 1,
+  cardid: '217891250122',
+  expiration: '01/14',
+  memberships: ['Pixlr Annual', 'SketchBook Annual']
+}, {
+  key: 2,
+  cardid: '123456781234',
+  expiration: '01/23',
+  memberships: ['Pixlr Annual']
+}, {
+  key: 3,
+  cardid: '217891250122',
+  expiration: '01/14',
+  memberships: ['Pixlr Annual', 'SketchBook Annual']
+}, {
+  key: 4,
+  cardid: '123456781234',
+  expiration: '01/23',
+  memberships: ['Pixlr Annual']
+}, {
+  key: 5,
+  cardid: '217891250122',
+  expiration: '01/14',
+  memberships: ['Pixlr Annual', 'SketchBook Annual']
 }]
