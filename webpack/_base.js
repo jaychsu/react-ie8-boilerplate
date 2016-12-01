@@ -1,5 +1,5 @@
 var path = require('path')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var extractTextPlugin = require('extract-text-webpack-plugin')
 var bundleFolderName = 'bundle'
 
 // The following paths are relative to path of `package.json`
@@ -14,16 +14,16 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader'), exclude: /node_modules/ },
-      { test: /\.less$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader!less-loader'), exclude: /node_modules/ },
-      { test: /\.js$/, loader: 'babel', exclude: /node_modules/ }
+      { test: /\.css$/, loader: extractTextPlugin.extract('style-loader', 'css-loader') },
+      { test: /\.less$/, loader: extractTextPlugin.extract('style-loader', 'css-loader!less-loader') },
+      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ }
     ],
     postLoaders: [
       { test: /\.js$/, loaders: ['es3ify-loader'] }
     ]
   },
   plugins: [
-    new ExtractTextPlugin(bundleFolderName + '/[name].css')
+    new extractTextPlugin(bundleFolderName + '/[name].css')
   ],
 
   resolve: {
