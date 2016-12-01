@@ -28,9 +28,7 @@ export default class SideBar extends Component {
     return (
       <div className="sidebar">
         <Link to="/home" onClick={ e => this.setState({ current: '' }) }>
-          <div
-            className="logo"
-          >
+          <div className="logo">
             Autodesk
           </div>
         </Link>
