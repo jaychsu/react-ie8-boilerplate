@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import { Row, Col } from 'antd'
+
+import SideBar from 'component/sidebar'
 
 export default class App extends Component {
   constructor(props) {
@@ -7,11 +10,17 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="app">
-        I am Layout
-        {
-          this.props.children && React.cloneElement(this.props.children, { parent: this })
-        }
+      <div id="app-container">
+        <Row>
+          <Col span={6}>
+            <SideBar />
+          </Col>
+          <Col span={18}>
+            {
+              this.props.children && React.cloneElement(this.props.children, { parent: this })
+            }
+          </Col>
+        </Row>
       </div>
     )
   }
