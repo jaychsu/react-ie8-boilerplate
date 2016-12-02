@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import {
   Card,
   Col,
@@ -32,7 +32,7 @@ export default class CreditList extends Component {
   }
 
   static propTypes = {
-    dataSource: React.PropTypes.array
+    dataSource: PropTypes.array
   }
 
   render() {

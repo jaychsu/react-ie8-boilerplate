@@ -1,15 +1,17 @@
 html,
 body,
 #app,
-#app-container,
-#app-container > .ant-row {
+#app-container {
   width: 100%;
   min-width: 1080px;
   height: 100%;
   overflow: hidden;
 }
 
-#app-content {
+#app-container > [class|=ant-col] {
   height: 100%;
+}
+
+#app-content {
   overflow-y: auto;
 }

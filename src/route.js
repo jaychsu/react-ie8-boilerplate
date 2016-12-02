@@ -27,6 +27,7 @@ export default class AppRouter extends Component {
           <Route path="profile" component={ Profile }/>
           <Route path="payment" component={ Payment }/>
           <Route path="communication" component={ Communication }/>
+          <Route path="product" component={ Product }/>
           <Route path="product/:pname" component={ Product }/>
         </Route>
       </Router>
