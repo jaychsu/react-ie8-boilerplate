@@ -3,10 +3,7 @@ Autodesk Account Setting
 
 ## Quick Start
 
-```
-npm i
-npm start
-```
+Just run `npm i`.
 
 ## Setup
 
@@ -15,11 +12,19 @@ npm start
 
 ## Development
 
+```javascript
+npm start // || `npm run dev`
+```
+
+## Test
+
 `-- empty for now --`
 
 ## Deployment
 
-`-- empty for now --`
+```javascript
+npm run build // || `npm run prod`
+```
 
 ## Tech Stack
 
