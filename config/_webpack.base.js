@@ -5,10 +5,10 @@ var bundleFolderName = 'bundle'
 // The following paths are relative to path of `package.json`
 module.exports = {
   entry: {
-    index: './client/index.entry.js'
+    index: './src/index.entry.js'
   },
   output: {
-    path: path.resolve('./client'),
+    path: path.resolve('./src'),
     filename: bundleFolderName + '/[name].js',
     chunkFilename: '[id].js'
   },
@@ -30,11 +30,11 @@ module.exports = {
     fallback: [ path.resolve('./node_modules') ],
     extensions: ['', '.js'],
     alias: {
-      api: path.resolve('./client/api'),
-      component: path.resolve('./client/component'),
-      container: path.resolve('./client/container'),
-      store: path.resolve('./client/store'),
-      util: path.resolve('./client/util')
+      api: path.resolve('./src/api'),
+      component: path.resolve('./src/component'),
+      container: path.resolve('./src/container'),
+      store: path.resolve('./src/store'),
+      util: path.resolve('./src/util')
     }
   },
   resolveLoader: {
