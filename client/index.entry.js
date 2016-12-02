@@ -1,5 +1,6 @@
 // Style
 import 'normalize.css'
+import 'util/variable.less'
 import 'util/global.less'
 
 // Init React

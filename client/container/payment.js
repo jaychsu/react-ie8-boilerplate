@@ -102,19 +102,16 @@ export default class Payment extends Component {
 }
 
 const transactions = [{
-  key: 0,
   date: 'Jan 1, 2016',
   order: 'SketchBook.com::#21321412',
   status: 'Completed',
   amount: 128.24
 }, {
-  key: 1,
   date: 'Jan 1, 2016',
   order: 'Pixlr.com::#134313135',
   status: 'Pending',
   amount: 28.24
 }, {
-  key: 2,
   date: 'Dec 1, 2015',
   order: 'Graphic.com::#1356361',
   status: 'Shipped',
@@ -122,32 +119,26 @@ const transactions = [{
 }]
 
 const credits = [{
-  key: 0,
   cardid: '123456781234',
   expiration: '01/23',
   memberships: ['Pixlr Annual']
 }, {
-  key: 1,
   cardid: '217891250122',
   expiration: '01/14',
   memberships: ['Pixlr Annual', 'SketchBook Annual']
 }, {
-  key: 2,
   cardid: '123456781234',
   expiration: '01/23',
   memberships: ['Pixlr Annual']
 }, {
-  key: 3,
   cardid: '217891250122',
   expiration: '01/14',
   memberships: ['Pixlr Annual', 'SketchBook Annual']
 }, {
-  key: 4,
   cardid: '123456781234',
   expiration: '01/23',
   memberships: ['Pixlr Annual']
 }, {
-  key: 5,
   cardid: '217891250122',
   expiration: '01/14',
   memberships: ['Pixlr Annual', 'SketchBook Annual']

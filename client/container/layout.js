@@ -15,7 +15,7 @@ export default class App extends Component {
           <Col span={4}>
             <SideBar />
           </Col>
-          <Col span={20}>
+          <Col span={20} id="app-content">
             {
               this.props.children && React.cloneElement(this.props.children, { parent: this })
             }

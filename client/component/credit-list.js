@@ -57,7 +57,7 @@ export default class CreditList extends Component {
 
   renderCreditCard(data, index) {
     return (
-      <Col span="8">
+      <Col span="8" key={ index }>
         <div className="credit-card"><Card title={ `CARD ${index+1}` }>
           <div className="credit-main clearfix">
             <span className="pull-left">
@@ -82,7 +82,7 @@ export default class CreditList extends Component {
   }
 
   renderMembership(membership, index) {
-    return <span>{[
+    return <span key={ index }>{[
       index === 0 ? '' : ',',
       membership
     ].join(' ')}</span>

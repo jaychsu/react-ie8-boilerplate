@@ -1,8 +1,15 @@
 html,
 body,
 #app,
-#app-container {
+#app-container,
+#app-container > .ant-row {
   width: 100%;
   min-width: 1080px;
   height: 100%;
+  overflow: hidden;
+}
+
+#app-content {
+  height: 100%;
+  overflow-y: auto;
 }
