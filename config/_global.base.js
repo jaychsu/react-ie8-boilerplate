@@ -1,5 +1,7 @@
 'use strict'
 
+var os = require('os')
+
 module.exports = {
   siteInfo: {
     title: 'Autodesk Accounts',
@@ -10,7 +12,7 @@ module.exports = {
     currentProtocol: 'http',
     httpPort: 9753,
     httpsPort: 9751,
-    getHost: require('./_host.js'),
+    getHost: getHost,
     getPort: function () {
       return (this.currentProtocol === 'https')
         ? this.httpsPort
@@ -22,4 +24,22 @@ module.exports = {
         : ['http://', this.getHost(), ':', this.httpPort, '/'].join('')
     }
   }
+}
+
+// Tools
+function getHost() {
+  var ifaces = os.networkInterfaces()
+  var ip = ''
+  var result = []
+
+  for(var dev in ifaces) {
+    ifaces[dev].forEach(function (details) {
+      if(ip === '' && details.family === 'IPv4' && !details.internal) {
+        ip = details.address
+        return;
+      }
+    })
+  }
+
+  return ip || '127.0.0.1'
 }
