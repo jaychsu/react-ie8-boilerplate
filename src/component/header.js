@@ -8,7 +8,10 @@ export default class Header extends Component {
   }
 
   static propTypes = {
-    title: React.PropTypes.string
+    title: React.PropTypes.oneOfType([
+      React.PropTypes.string,
+      React.PropTypes.element
+    ])
   }
 
   render() {

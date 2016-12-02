@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+
 import Header from 'component/header'
+import Section from 'component/section'
 
 export default class Product extends Component {
   constructor(props) {
@@ -9,7 +11,20 @@ export default class Product extends Component {
   render() {
     return (
       <div>
-        <Header title={ `Product: ${this.props.params.pname}` } />
+        <Header title={ `${this.props.params.pname} Settings` } />
+        <Section
+          title="Membership Information"
+          content={ <div /> }
+        />
+        <Section
+          title="Download My Software"
+          subtitle="Looking for your software? Download this app for different devices."
+          content={ <div /> }
+        />
+        <Section
+          title="Pixlr Transaction History"
+          content={ <div /> }
+        />
       </div>
     )
   }
