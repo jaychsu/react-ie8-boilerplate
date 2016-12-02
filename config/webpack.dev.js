@@ -1,3 +1,5 @@
+'use strict'
+
 var baseConfig = require('./_webpack.base.js')
 var webpack = require('webpack')
 

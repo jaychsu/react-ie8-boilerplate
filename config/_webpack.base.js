@@ -1,3 +1,5 @@
+'use strict'
+
 var path = require('path')
 var extractTextPlugin = require('extract-text-webpack-plugin')
 var bundleFolderName = 'bundle'

@@ -47,7 +47,3 @@ npm run build // || `npm run prod`
 - Firefox
 - Safari
 - Opera
-
-### Downgrade Policy
-
-- IE7 and below
