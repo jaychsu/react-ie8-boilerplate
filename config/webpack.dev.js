@@ -35,7 +35,7 @@ module.exports = Object.assign(baseConfig, {
     })
   ]),
   devServer: {
-    histroyApiFallback: true,
+    historyApiFallback: true,
     hot: true,
     stats: 'erros-only',
     host: globalConfig.server.getHost(),
