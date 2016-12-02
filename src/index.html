@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge;chorme=1" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="<%= htmlWebpackPlugin.options.description %>" />
+    <meta name="keywords" content="<%= htmlWebpackPlugin.options.keywords %>" />
+    <meta name="Robots" content="all" />
+    <meta content="email=no" name="format-detection" />
+    <meta content="telephone=no" name="format-detection" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <!--[if lt IE 9]>
+    <% htmlWebpackPlugin.options.shims.forEach(function(item){ %>
+    <script src="<%= item %>"></script>
+    <% }) %>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>

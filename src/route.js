@@ -14,7 +14,7 @@ import Communication from './container/communication'
 import Product from './container/product'
 
 const history = useBasename(createHistory)({
-    basename: '/'
+  basename: '/'
 })
 
 export default class AppRouter extends Component {
