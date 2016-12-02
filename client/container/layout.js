@@ -10,18 +10,16 @@ export default class App extends Component {
 
   render() {
     return (
-      <div id="app-container">
-        <Row>
-          <Col span={4}>
-            <SideBar />
-          </Col>
-          <Col span={20} id="app-content">
-            {
-              this.props.children && React.cloneElement(this.props.children, { parent: this })
-            }
-          </Col>
-        </Row>
-      </div>
+      <Row id="app-container">
+        <Col span={4}>
+          <SideBar />
+        </Col>
+        <Col span={20} id="app-content">
+          {
+            this.props.children && React.cloneElement(this.props.children, { parent: this })
+          }
+        </Col>
+      </Row>
     )
   }
 }

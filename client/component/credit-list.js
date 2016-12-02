@@ -57,8 +57,8 @@ export default class CreditList extends Component {
 
   renderCreditCard(data, index) {
     return (
-      <Col span="8" key={ index }>
-        <div className="credit-card"><Card title={ `CARD ${index+1}` }>
+      <Col span="8" key={ index } className="credit-card">
+        <Card title={ `CARD ${index+1}` }>
           <div className="credit-main clearfix">
             <span className="pull-left">
               { `**** ${data.cardid.slice(-4)}` }
@@ -68,15 +68,13 @@ export default class CreditList extends Component {
             </span>
           </div>
           <div className="credit-other">
-            <div>
-              <h4>LINKED MEMBERSHIPS:</h4>
-              <p>
-                { data.memberships.map((membership, index) => this.renderMembership(membership, index)) }
-              </p>
-              { this.renderActions(index) }
-            </div>
+            <h4>LINKED MEMBERSHIPS:</h4>
+            <p>
+              { data.memberships.map((membership, index) => this.renderMembership(membership, index)) }
+            </p>
+            { this.renderActions(index) }
           </div>
-        </Card></div>
+        </Card>
       </Col>
     )
   }
