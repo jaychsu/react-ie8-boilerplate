@@ -3,7 +3,9 @@ Autodesk Account Setting
 
 ## Quick Start
 
-Just run `npm i`.
+```javascript
+npm i
+```
 
 ## Setup
 
