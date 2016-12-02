@@ -1,4 +1,4 @@
-var baseConfig = require('./_base')
+var baseConfig = require('./_webpack.base.js')
 var webpack = require('webpack')
 
 module.exports = Object.assign(baseConfig, {

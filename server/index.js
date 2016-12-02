@@ -16,7 +16,7 @@ var compiler
 
 if ( util.env.isEnvAvailable()
   && util.env.current === 'dev') {
-  webpackConfig = require('../webpack/dev.js')
+  webpackConfig = require('../config/webpack.dev.js')
   compiler = webpack(webpackConfig)
 
   app.use(require('webpack-dev-middleware')(compiler, {
