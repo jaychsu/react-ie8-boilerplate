@@ -28,6 +28,7 @@ export default class AppRouter extends Component {
           <Route path="payment" component={ Payment }/>
           <Route path="communication" component={ Communication }/>
           <Route path="product/:pname" component={ Product }/>
+          <Route path="*" onEnter={ (nextState, replace) => replace('', 'home') } />
         </Route>
       </Router>
     )
