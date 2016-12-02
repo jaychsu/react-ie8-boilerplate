@@ -3,10 +3,14 @@
   "version": "0.0.1",
   "description": "A site to manage account settings.",
   "main": "server/index.js",
+  "engines": {
+    "node": ">=4.6.2",
+    "npm": ">=3.10.8"
+  },
   "scripts": {
-    "start": "NODE_ENV=dev node server/index.js",
+    "start": "cross-env NODE_ENV=dev node node_modules/webpack-dev-server/bin/webpack-dev-server --config config/webpack.dev.js",
     "dev": "npm run start",
-    "build": "cross-env NODE_ENV=prod webpack --config config/webpack.prod.js",
+    "build": "cross-env NODE_ENV=prod node node_modules/webpack/bin/webpack --config config/webpack.prod.js --progress --profile --colors",
     "prod": "npm run build",
     "test": ""
   },
@@ -18,13 +22,14 @@
   },
   "dependencies": {
     "antd": "2.5.0",
+    "autoprefixer": "6.4.1",
     "console-polyfill": "0.2.2",
     "es5-shim": "4.5.9",
     "es6-promise": "3.2.1",
-    "eventsource-polyfill": "0.9.6",
     "extract-text-webpack-plugin": "1.0.1",
     "fetch-ie8": "1.4.0",
     "history": "1.17.0",
+    "html5shiv": "3.7.3",
     "normalize.css": "5.0.0",
     "object-assign": "4.0.1",
     "react": "0.14.3",
@@ -47,11 +52,12 @@
     "cross-env": "1.0.6",
     "css-loader": "0.26.0",
     "es3ify-loader": "0.1.0",
+    "html-webpack-plugin": "2.22.0",
     "less": "2.7.1",
     "less-loader": "2.2.3",
+    "open-browser-webpack-plugin": "0.0.2",
     "style-loader": "0.13.1",
-    "webpack": "1.12.9",
-    "webpack-dev-middleware": "1.4.0",
-    "webpack-hot-middleware": "2.6.0"
+    "webpack": "1.13.2",
+    "webpack-dev-server": "1.15.1"
   }
 }

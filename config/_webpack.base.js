@@ -1,45 +1,48 @@
 'use strict'
 
 var path = require('path')
-var extractTextPlugin = require('extract-text-webpack-plugin')
-var bundleFolderName = 'bundle'
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 // The following paths are relative to path of `package.json`
+var pathClient = path.resolve('./src')
+var pathNodeModule = path.resolve('./node_modules')
+var dirBundle = 'bundle'
+
 module.exports = {
   entry: {
     index: './src/index.entry.js'
   },
   output: {
-    path: path.resolve('./src'),
-    filename: bundleFolderName + '/[name].js',
-    chunkFilename: '[id].js'
+    path: pathClient,
+    filename: dirBundle + '/[name]-[hash].js'
   },
   module: {
     loaders: [
-      { test: /\.css$/, loader: extractTextPlugin.extract('style-loader', 'css-loader') },
-      { test: /\.less$/, loader: extractTextPlugin.extract('style-loader', 'css-loader!less-loader') },
+      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader') },
+      { test: /\.less$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader!less-loader') },
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ }
     ],
     postLoaders: [
       { test: /\.js$/, loaders: ['es3ify-loader'] }
     ]
   },
+
   plugins: [
-    new extractTextPlugin(bundleFolderName + '/[name].css')
+    new ExtractTextPlugin(dirBundle + '/[name]-[hash].css')
   ],
+  postcss: function() {
+    return [ autoprefixer ]
+  },
 
   resolve: {
-    fallback: [ path.resolve('./node_modules') ],
-    extensions: ['', '.js'],
+    root: [ pathClient, pathNodeModule ],
+    extensions: ['', '.js', '.css', '.less'],
     alias: {
-      api: path.resolve('./src/api'),
-      component: path.resolve('./src/component'),
-      container: path.resolve('./src/container'),
-      store: path.resolve('./src/store'),
-      util: path.resolve('./src/util')
+      api: path.join(pathClient, 'api'),
+      component: path.join(pathClient, 'component'),
+      container: path.join(pathClient, 'container'),
+      store: path.join(pathClient, 'store'),
+      util: path.join(pathClient, 'util')
     }
-  },
-  resolveLoader: {
-    fallback: [ path.resolve('./node_modules') ]
   }
 }
