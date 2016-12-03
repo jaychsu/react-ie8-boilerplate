@@ -1,20 +1,21 @@
 'use strict'
 
 var path = require('path')
+var webpack = require('webpack')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 // The following paths are relative to path of `package.json`
-var pathClient = path.resolve('./src')
+var pathSrc = path.resolve('./src')
+var pathDist = path.resolve('./dist')
 var pathNodeModule = path.resolve('./node_modules')
-var dirBundle = 'bundle'
 
 module.exports = {
   entry: {
     index: './src/index.entry.js'
   },
   output: {
-    path: pathClient,
-    filename: dirBundle + '/[name]-[hash].js'
+    path: pathDist,
+    filename: '[name]-[hash].js'
   },
   module: {
     loaders: [
@@ -28,21 +29,25 @@ module.exports = {
   },
 
   plugins: [
-    new ExtractTextPlugin(dirBundle + '/[name]-[hash].css')
+    new ExtractTextPlugin('[name]-[hash].css'),
+    new webpack.optimize.CommonsChunkPlugin('common', 'common-[hash].js'),
+
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.NoErrorsPlugin()
   ],
   postcss: function() {
     return [ autoprefixer ]
   },
 
   resolve: {
-    root: [ pathClient, pathNodeModule ],
+    root: [ pathSrc, pathNodeModule ],
     extensions: ['', '.js', '.css', '.less'],
     alias: {
-      api: path.join(pathClient, 'api'),
-      component: path.join(pathClient, 'component'),
-      container: path.join(pathClient, 'container'),
-      store: path.join(pathClient, 'store'),
-      util: path.join(pathClient, 'util')
+      api: path.join(pathSrc, 'api'),
+      component: path.join(pathSrc, 'component'),
+      container: path.join(pathSrc, 'container'),
+      store: path.join(pathSrc, 'store'),
+      util: path.join(pathSrc, 'util')
     }
   }
 }

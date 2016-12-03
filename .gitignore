@@ -1,6 +1,9 @@
 # System Files
 .DS_Store
 
+# Compiled
+dist
+
 # Node
 node_modules
 
