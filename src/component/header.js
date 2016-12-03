@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 
 import './header.less'
 
@@ -8,7 +8,10 @@ export default class Header extends Component {
   }
 
   static propTypes = {
-    title: React.PropTypes.string
+    title: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.element
+    ])
   }
 
   render() {

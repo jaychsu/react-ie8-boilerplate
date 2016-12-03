@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 
 import './section.less'
 
@@ -8,9 +8,9 @@ export default class Section extends Component {
   }
 
   static propTypes = {
-    title: React.PropTypes.string.isRequired,
-    subtitle: React.PropTypes.string,
-    content: React.PropTypes.element.isRequired
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string,
+    content: PropTypes.element.isRequired
   }
 
   render() {
