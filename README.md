@@ -10,7 +10,7 @@ npm i
 ## Setup
 
 - `node 4.6.2`
-- `npm 3.10.8+`
+- `npm 2.15.11+`
 
 ## Development
 

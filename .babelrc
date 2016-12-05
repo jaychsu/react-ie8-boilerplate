@@ -7,14 +7,12 @@
   ],
   "plugins": [
     "add-module-exports",
-    [ "import", {
-      "libraryName": "antd",
-      "style": true
-    }]
-  ],
-  "env": {
-    "prod" : {
-      "presets": ["react-optimize"]
-    }
-  }
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "style": true
+      }
+    ]
+  ]
 }

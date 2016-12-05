@@ -20,7 +20,9 @@ const history = useBasename(createHistory)({
 export default class AppRouter extends Component {
   render() {
     return (
-      <Router history={ history }>
+      // the first letter in attr `History` must be capital.
+      // If not, you will get `Uncaught DOMException: Failed to execute 'replaceState' on 'History'` on production.
+      <Router History={ history }>
         <Route path="/" component={ Layout }>
           <IndexRoute onEnter={ (nextState, replace) => replace('', 'home') } />
           <Route path="home" component={ Home }/>
@@ -29,6 +31,7 @@ export default class AppRouter extends Component {
           <Route path="communication" component={ Communication }/>
           <Route path="product" component={ Product }/>
           <Route path="product/:pname" component={ Product }/>
+          <Route path="*" onEnter={ (nextState, replace) => replace('', 'home') } />
         </Route>
       </Router>
     )
