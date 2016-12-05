@@ -32,6 +32,7 @@ npm run build // || `npm run prod`
 
 - [x] [React](https://facebook.github.io/react/): A javascript library for building user interfaces.
 - [ ] [Redux](http://redux.js.org/): Predictable state container for JavaScript apps.
+- [ ] [immutable-js](http://facebook.github.io/immutable-js/): Immutable persistent data collections for Javascript which increase efficiency and simplicity.
 - [x] [Ant Design](https://ant.design/docs/react/introduce): An enterprise-class UI design language and React-based implementation.
 - [x] [Webpack](http://webpack.github.io/docs/): To bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.
 - [x] [Babel](https://babeljs.io/): Babel is a compiler for writing next generation JavaScript.
