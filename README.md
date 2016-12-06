@@ -37,8 +37,7 @@ npm run build // || `npm run prod`
 - [x] [Webpack](http://webpack.github.io/docs/): To bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.
 - [x] [Babel](https://babeljs.io/): Babel is a compiler for writing next generation JavaScript.
 - [x] [LESS](http://lesscss.org/functions/): A dynamic stylesheet language.
-- [ ] [ESLint](http://eslint.org/): The pluggable linting utility for JavaScript and JSX.
-- [ ] [Flow](https://flowtype.org/docs/getting-started.html): A static type checker for javascript.
+- [x] [ESLint](http://eslint.org/): The pluggable linting utility for JavaScript and JSX.
 - [ ] [jest](https://facebook.github.io/jest/docs/api.html): A JavaScript testing framework, used by Facebook to test all JavaScript code including React applications.
 
 ## Browser compatibility
