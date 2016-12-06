@@ -13,6 +13,11 @@ module.exports = Object.assign(baseConfig, {
   debug: true,
   devtool: 'eval-source-map',
 
+  module: Object.assign(baseConfig.module, {
+    preLoaders: [
+      { test: /\.js?$/, loaders: ['eslint-loader'], exclude: /node_modules/ }
+    ]
+  }),
   plugins: baseConfig.plugins.concat([
     new HtmlWebpackPlugin({
       title: globalConfig.siteInfo.title,
@@ -31,6 +36,11 @@ module.exports = Object.assign(baseConfig, {
       url: globalConfig.server.getUrl()
     })
   ]),
+
+  eslint: {
+    configFile: './.eslintrc',
+    emitWarning: true
+  },
   devServer: {
     historyApiFallback: true,
     hot: true,

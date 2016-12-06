@@ -10,7 +10,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=dev node node_modules/webpack-dev-server/bin/webpack-dev-server --config config/webpack.dev.js",
     "dev": "npm run start",
-    "build": "cross-env NODE_ENV=prod node node_modules/webpack/bin/webpack --config config/webpack.prod.js --progress --profile --colors",
+    "build": "cross-env NODE_ENV=prod node node_modules/webpack/bin/webpack --config config/webpack.prod.js",
     "prod": "npm run build",
     "test": ""
   },
@@ -43,6 +43,7 @@
   "devDependencies": {
     "autoprefixer": "6.4.1",
     "babel-core": "6.14.0",
+    "babel-eslint": "6.1.2",
     "babel-loader": "6.2.5",
     "babel-plugin-add-module-exports": "0.1.2",
     "babel-plugin-import": "1.1.0",
@@ -54,6 +55,12 @@
     "cross-env": "1.0.6",
     "css-loader": "0.26.0",
     "es3ify-loader": "0.1.0",
+    "eslint": "3.11.1",
+    "eslint-config-airbnb": "13.0.0",
+    "eslint-loader": "1.6.1",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jsx-a11y": "2.2.3",
+    "eslint-plugin-react": "6.8.0",
     "extract-text-webpack-plugin": "1.0.1",
     "html-webpack-plugin": "2.22.0",
     "less": "2.7.1",
