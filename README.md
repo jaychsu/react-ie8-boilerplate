@@ -38,7 +38,7 @@ npm run build // || `npm run prod`
 - [x] [Babel](https://babeljs.io/): Babel is a compiler for writing next generation JavaScript.
 - [x] [LESS](http://lesscss.org/functions/): A dynamic stylesheet language.
 - [x] [ESLint](http://eslint.org/): The pluggable linting utility for JavaScript and JSX.
-- [ ] [jest](https://facebook.github.io/jest/docs/api.html): A JavaScript testing framework, used by Facebook to test all JavaScript code including React applications.
+- [x] [jest](https://facebook.github.io/jest/docs/api.html): A JavaScript testing framework, used by Facebook to test all JavaScript code including React applications.
 
 ## Browser compatibility
 
