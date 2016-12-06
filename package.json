@@ -8,9 +8,9 @@
     "npm": ">=2.15.11"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=dev node node_modules/webpack-dev-server/bin/webpack-dev-server --config config/webpack.dev.js",
+    "start": "cross-env ENV_NAME=dev node node_modules/webpack-dev-server/bin/webpack-dev-server --config config/webpack.dev.js",
     "dev": "npm run start",
-    "build": "cross-env NODE_ENV=prod node node_modules/webpack/bin/webpack --config config/webpack.prod.js",
+    "build": "cross-env ENV_NAME=prod node node_modules/webpack/bin/webpack --config config/webpack.prod.js",
     "prod": "npm run build",
     "test": ""
   },
