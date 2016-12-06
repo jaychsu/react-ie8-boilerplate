@@ -3,15 +3,11 @@ import React, { Component, PropTypes } from 'react'
 import './header.less'
 
 export default class Header extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   static propTypes = {
     title: PropTypes.oneOfType([
       PropTypes.string,
-      PropTypes.element
-    ])
+      PropTypes.element,
+    ]),
   }
 
   render() {
