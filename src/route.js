@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {
   Router,
   Route,
-  IndexRoute
+  IndexRoute,
 } from 'react-router'
 import { createHistory, useBasename } from 'history'
 
@@ -20,9 +20,7 @@ import Communication from './container/communication'
 import Product from './container/product'
 
 const store = configStore()
-const history = syncHistoryWithStore(useBasename(createHistory)({
-  basename: '/'
-}), store)
+const history = syncHistoryWithStore(useBasename(createHistory)({ basename: '/' }), store)
 
 export default class AppRouter extends Component {
   render() {
@@ -31,12 +29,12 @@ export default class AppRouter extends Component {
         <Router history={ history }>
           <Route path="/" component={ Layout }>
             <IndexRoute onEnter={ (nextState, replace) => replace('', 'home') } />
-            <Route path="home" component={ Home }/>
-            <Route path="profile" component={ Profile }/>
-            <Route path="payment" component={ Payment }/>
-            <Route path="communication" component={ Communication }/>
-            <Route path="product" component={ Product }/>
-            <Route path="product/:pname" component={ Product }/>
+            <Route path="home" component={ Home } />
+            <Route path="profile" component={ Profile } />
+            <Route path="payment" component={ Payment } />
+            <Route path="communication" component={ Communication } />
+            <Route path="product" component={ Product } />
+            <Route path="product/:pname" component={ Product } />
             <Route path="*" onEnter={ (nextState, replace) => replace('', 'home') } />
           </Route>
         </Router>

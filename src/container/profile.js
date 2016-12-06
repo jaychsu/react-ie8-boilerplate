@@ -4,10 +4,6 @@ import Header from 'component/header'
 import Section from 'component/section'
 
 export default class Profile extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     return (
       <div>

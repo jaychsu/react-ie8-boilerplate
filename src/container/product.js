@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 
 import Header from 'component/header'
 import Section from 'component/section'
 
 export default class Product extends Component {
-  constructor(props) {
-    super(props)
+  static propTypes = {
+    params: PropTypes.string.isRequired,
   }
 
   render() {
