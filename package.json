@@ -63,6 +63,7 @@
     "eslint-plugin-react": "6.8.0",
     "extract-text-webpack-plugin": "1.0.1",
     "html-webpack-plugin": "2.22.0",
+    "jest": "17.0.3",
     "less": "2.7.1",
     "less-loader": "2.2.3",
     "open-browser-webpack-plugin": "0.0.2",
