@@ -19,6 +19,13 @@ module.exports = Object.assign(baseConfig, {
     ]
   }),
   plugins: baseConfig.plugins.concat([
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('development'),
+        'DEBUG': true,
+      }
+    }),
+
     new HtmlWebpackPlugin({
       title: globalConfig.siteInfo.title,
       description: globalConfig.siteInfo.description,
