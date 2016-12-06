@@ -12,7 +12,7 @@
     "dev": "npm run start",
     "build": "cross-env ENV_NAME=prod node node_modules/webpack/bin/webpack --config config/webpack.prod.js",
     "prod": "npm run build",
-    "test": ""
+    "test": "jest"
   },
   "license": "ISC",
   "author": "DA-Service",
@@ -44,9 +44,11 @@
     "autoprefixer": "6.4.1",
     "babel-core": "6.14.0",
     "babel-eslint": "6.1.2",
+    "babel-jest": "17.0.2",
     "babel-loader": "6.2.5",
     "babel-plugin-add-module-exports": "0.1.2",
     "babel-plugin-import": "1.1.0",
+    "babel-polyfill": "6.16.0",
     "babel-preset-es2015": "6.14.0",
     "babel-preset-react": "6.11.1",
     "babel-preset-stage-2": "6.13.0",
@@ -63,6 +65,7 @@
     "eslint-plugin-react": "6.8.0",
     "extract-text-webpack-plugin": "1.0.1",
     "html-webpack-plugin": "2.22.0",
+    "jest": "17.0.3",
     "less": "2.7.1",
     "less-loader": "2.2.3",
     "open-browser-webpack-plugin": "0.0.2",
