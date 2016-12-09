@@ -4,9 +4,5 @@
 # Compiled Dest
 dist
 
-# Node
-node_modules
-
-# Log
-*.log
-coverage
+# Server Config
+nginx.conf
