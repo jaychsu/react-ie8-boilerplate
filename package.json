@@ -10,6 +10,7 @@
     "start": "cross-env ENV_NAME=dev node node_modules/webpack-dev-server/bin/webpack-dev-server --config config/webpack.dev.js",
     "dev": "npm run start",
     "build": "cross-env ENV_NAME=prod node node_modules/webpack/bin/webpack --config config/webpack.prod.js",
+    "preprod": "jest",
     "prod": "npm run build",
     "test": "jest --coverage"
   },

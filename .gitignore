@@ -7,6 +7,7 @@ dist
 # Node
 node_modules
 
-# Log
+# Log and Report
 *.log
+jest
 coverage
