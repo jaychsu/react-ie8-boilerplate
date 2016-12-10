@@ -11,8 +11,7 @@ fi
 
 # Pull Images
 # ======
-# ubuntu 14.04.5 LTS (Trusty Tahr)
-docker pull openresty/openresty:trusty
+docker pull nginx:1.11.6
 # node 4.6.2 && npm 2.15.11
 docker pull node:4.6.2
 
