@@ -9,13 +9,15 @@ Autodesk Account
 ## Development
 
 ```shell
-# empty for now
+# Do [Quick Start](./#quick-start) first if not yet done.
+./bin/develop.sh
 ```
 
 ## Deployment
 
 ```shell
-# empty for now
+# Do [Quick Start](./#quick-start) first if not yet done.
+./bin/public.sh
 ```
 
 ## Tech Stack
