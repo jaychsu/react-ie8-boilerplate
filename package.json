@@ -12,7 +12,7 @@
     "dev": "npm run start",
     "build": "cross-env ENV_NAME=prod node node_modules/webpack/bin/webpack --config config/webpack.prod.js",
     "prod": "npm run build",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "license": "ISC",
   "author": "DA-Service",
