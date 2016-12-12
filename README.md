@@ -1,31 +1,23 @@
-Autodesk Account Setting
+Autodesk Account
 ======
 
 ## Quick Start
 
-```javascript
-npm i
-```
-
-## Setup
-
-- `node 4.6.2`
-- `npm 2.15.11+`
+1. Install [`Docker`](https://www.docker.com/products/docker).
+2. Run `./bin/setup.sh` in your `Terminal`.
 
 ## Development
 
-```javascript
-npm start // || `npm run dev`
+```shell
+# Do [Quick Start](./#quick-start) first if not yet done.
+./bin/develop.sh
 ```
-
-## Test
-
-`-- empty for now --`
 
 ## Deployment
 
-```javascript
-npm run build // || `npm run prod`
+```shell
+# Do [Quick Start](./#quick-start) first if not yet done.
+./bin/public.sh
 ```
 
 ## Tech Stack
@@ -40,7 +32,7 @@ npm run build // || `npm run prod`
 - [x] [ESLint](http://eslint.org/): The pluggable linting utility for JavaScript and JSX.
 - [x] [jest](https://facebook.github.io/jest/docs/api.html): A JavaScript testing framework, used by Facebook to test all JavaScript code including React applications.
 
-## Browser compatibility
+## Browser Compatibility
 
 - IE8 and above
 - Chrome
