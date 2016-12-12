@@ -15,9 +15,17 @@ Autodesk Account
 
 ## Deployment
 
+### Publish Server
+
 ```shell
 # Do [Quick Start](./#quick-start) first if not yet done.
-./bin/public.sh
+./bin/publish.sh
+```
+
+### Hot Reload Config or Static
+
+```shell
+# Empty for now #
 ```
 
 ## Tech Stack

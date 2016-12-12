@@ -8,6 +8,7 @@ if [ ! -d bin ]; then
 fi
 
 ./bin/_check.sh
+./bin/_build.sh
 
 # Nginx
 docker run \
