@@ -11,8 +11,8 @@ fi
 
 ACTIONS="
   set -e;
-  npm install;
+  yarn install;
   npm run dev;
 "
 
-docker run -it --rm -v $PWD:/app -w "/app" node:4.6.2 /bin/bash -c "$ACTIONS"
+docker run -it --rm -v $PWD:/app -w "/app" node-das:1.0.0 /bin/bash -c "$ACTIONS"
