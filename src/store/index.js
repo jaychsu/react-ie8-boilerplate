@@ -8,7 +8,7 @@ import reducers from './reducer'
 
 const activeMiddlewares = [
   thunkMiddleware,
-  process.env.DEBUG && createLogger()
+  process.env.DEBUG && createLogger(),
 ].filter(Boolean)
 
 export default function configStore(initState) {
