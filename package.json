@@ -1,7 +1,7 @@
 {
-  "name": "autodesk-account",
+  "name": "react-ie8-boilerplate",
   "version": "0.0.1",
-  "description": "A site to manage account settings.",
+  "description": "Quickly build web app via React and related tech.",
   "engines": {
     "node": ">=4.6.2",
     "npm": ">=2.15.11"
@@ -14,11 +14,11 @@
     "prod": "npm run build",
     "test": "jest --coverage"
   },
-  "license": "ISC",
-  "author": "DA-Service",
+  "license": "MIT",
+  "author": "Jaych Su",
   "repository": {
     "type": "git",
-    "url": "https://git.autodesk.com/DA-Service/Autodesk-Account.git"
+    "url": "https://github.com/jaychsu/react-ie8-boilerplate.git"
   },
   "dependencies": {
     "antd": "2.5.0",

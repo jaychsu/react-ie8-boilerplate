@@ -1,4 +1,4 @@
-Autodesk Account
+React IE8 Boilerplate
 ======
 
 ## Quick Start

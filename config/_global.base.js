@@ -4,9 +4,9 @@ var os = require('os')
 
 module.exports = {
   siteInfo: {
-    title: 'Autodesk Accounts',
-    description: 'Manage Autodesk account settings.',
-    keywords: 'Autodesk account settings',
+    title: 'React IE8 Boilerplate',
+    description: 'Quickly build web app via React and related tech.',
+    keywords: 'react ie8 boilerplate',
   },
   server: {
     currentProtocol: 'http',
