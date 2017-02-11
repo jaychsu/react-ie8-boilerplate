@@ -21,7 +21,7 @@
     "url": "https://github.com/jaychsu/react-ie8-boilerplate.git"
   },
   "dependencies": {
-    "antd": "2.5.0",
+    "antd": "2.7.1",
     "console-polyfill": "0.2.2",
     "es5-shim": "4.5.9",
     "es6-promise": "3.2.1",
