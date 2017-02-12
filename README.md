@@ -6,6 +6,18 @@ React IE8 Boilerplate
 1. Install [`Docker`](https://www.docker.com/products/docker).
 2. Run `./bin/setup.sh` in your `Terminal`.
 
+or just run
+
+```shell
+npm install
+npm start
+```
+
+with
+
+- node 4.6.2
+- npm 2.15.11
+
 ## Development
 
 ```shell
