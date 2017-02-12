@@ -2,7 +2,6 @@
 
 var path = require('path')
 var webpack = require('webpack')
-var OpenBrowserPlugin = require('open-browser-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 var pathSrc = path.resolve('./src')
@@ -38,9 +37,6 @@ module.exports = Object.assign(baseConfig, {
         'node_modules/es5-shim/es5-sham.min.js',
         'node_modules/html5shiv/dist/html5shiv.min.js'
       ]
-    }),
-    new OpenBrowserPlugin({
-      url: globalConfig.server.getUrl()
     })
   ]),
 

@@ -12,7 +12,10 @@ module.exports = {
     currentProtocol: 'http',
     httpPort: 9753,
     httpsPort: 9751,
-    getHost: getHost,
+    getHost: function () {
+      // TODO: this is a temporary hack since `getHost()` in Docker will return vm's host.
+      return '0.0.0.0'
+    },
     getPort: function () {
       return (this.currentProtocol === 'https')
         ? this.httpsPort
