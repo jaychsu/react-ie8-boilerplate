@@ -1,8 +1,6 @@
 #!/bin/bash
 set -e
 
-./bin/_check.sh
-
 # Pull Images
 # ======
 docker pull nginx:1.11.6

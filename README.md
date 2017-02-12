@@ -4,7 +4,7 @@ React IE8 Boilerplate
 ## Quick Start
 
 1. Install [`Docker`](https://www.docker.com/products/docker).
-2. Run `./bin/setup.sh` in your `Terminal`.
+2. Run `./bin/start setup` in your `Terminal`.
 
 or just simply run
 
@@ -13,7 +13,7 @@ npm install
 npm start
 ```
 
-with
+under
 
 - node 4.6.2
 - npm 2.15.11
@@ -22,7 +22,7 @@ with
 
 ```shell
 # Do [Quick Start](./#quick-start) first if not yet done.
-./bin/develop.sh
+./bin/start develop
 ```
 
 ## Deployment
@@ -31,7 +31,7 @@ with
 
 ```shell
 # Do [Quick Start](./#quick-start) first if not yet done.
-./bin/publish.sh
+./bin/start publish
 ```
 
 ### Hot Reload Config or Static

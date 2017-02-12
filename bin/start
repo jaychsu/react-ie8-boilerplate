@@ -1,0 +1,49 @@
+#!/bin/bash
+set -e
+
+# Check for Current Workdir
+echo "Current workdir is: ${PWD}."
+if [ ! -d bin ]; then
+  echo "Please run script under project rootdir."
+  exit 1
+fi
+
+# Check for Docker Installation
+docker -v
+if [ $? != 0 ]; then
+  echo "Please install [Docker](https://www.docker.com/products/docker) first."
+  exit 1
+fi
+
+# Check task name
+case $1 in
+  setup)
+    echo -e "Start to setup docker images.\n"
+    bash ./bin/setup.sh
+    ;;
+  develop)
+    echo -e "Start to serve app.\n"
+    bash ./bin/develop.sh
+    ;;
+  publish)
+    echo -e "Start to publish app.\n"
+    bash ./bin/publish.sh
+    ;;
+  reload)
+    echo -e "Start to reload config and apply to container.\n"
+    bash ./bin/reload.sh
+    ;;
+  *)
+    echo "
+Usage: ./bin/start [OPTION]...
+Example: ./bin/start setup
+
+Options
+  setup: Start to setup docker images.
+  develop: Start to serve app.
+  publish: Start to publish app.
+  reload: Start to reload config and apply to container.
+"
+    exit 1
+    ;;
+esac

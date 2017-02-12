@@ -1,8 +1,6 @@
 #!/bin/bash
 set -e
 
-./bin/_check.sh
-
 ACTIONS="
   set -e;
   yarn install;
